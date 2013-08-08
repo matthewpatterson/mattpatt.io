@@ -3,8 +3,90 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c5579bc98c4d6b84013d97ee9d5993c5",
+    "hash": "bf4b84b1deb959c12bdaef771aae467e",
     "packages": [
+        {
+            "name": "coffeescript/coffeescript",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alxlit/coffeescript-php",
+                "reference": "1.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/alxlit/coffeescript-php/zipball/1.3.1",
+                "reference": "1.3.1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CoffeeScript": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Little",
+                    "email": "alxlit@gmail.com",
+                    "homepage": "http://alxlit.name"
+                }
+            ],
+            "description": "A port of the CoffeeScript compiler to PHP.",
+            "homepage": "http://github.com/alxlit/coffeescript-php",
+            "keywords": [
+                "JS",
+                "coffee",
+                "coffeescript",
+                "javascript"
+            ],
+            "time": "2012-08-04 07:44:51"
+        },
+        {
+            "name": "jalle19/php-yui-compressor",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jalle19/php-yui-compressor.git",
+                "reference": "920449ccb7c8c9818eea93c87f3e7160460f997d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jalle19/php-yui-compressor/zipball/920449ccb7c8c9818eea93c87f3e7160460f997d",
+                "reference": "920449ccb7c8c9818eea93c87f3e7160460f997d",
+                "shasum": ""
+            },
+            "require": {
+                "nervo/yuicompressor": "dev-master",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "YUI": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "A modern PHP wrapper for the YUI compressor",
+            "homepage": "https://github.com/Jalle19/php-yui-compressor",
+            "keywords": [
+                "JS",
+                "css",
+                "minify",
+                "yui"
+            ],
+            "time": "2013-07-09 08:38:01"
+        },
         {
             "name": "jaz303/phake",
             "version": "v0.5.1",
@@ -44,6 +126,123 @@
                 "cli"
             ],
             "time": "2013-07-15 19:08:00"
+        },
+        {
+            "name": "leafo/lessphp",
+            "version": "v0.3.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/lessphp.git",
+                "reference": "v0.3.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/v0.3.9",
+                "reference": "v0.3.9",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "lessphp is a compiler for LESS written in PHP.",
+            "homepage": "http://leafo.net/lessphp/",
+            "time": "2013-03-02 16:13:31"
+        },
+        {
+            "name": "nervo/yuicompressor",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nervo/yuicompressor.git",
+                "reference": "2.4.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nervo/yuicompressor/zipball/2.4.7",
+                "reference": "2.4.7",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "description": "YUI Compressor is an open source tool that supports the compression of both JavaScript and CSS files. The JavaScript compression removes comments and white-spaces as well as obfuscates local variables using the smallest possible variable name. CSS compression is done using a regular-expression-based CSS minifier.",
+            "homepage": "https://github.com/yui/yuicompressor",
+            "keywords": [
+                "java",
+                "yui"
+            ],
+            "time": "2012-05-12 08:31:30"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.13.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "v1.13.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.13.2",
+                "reference": "v1.13.2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2013-08-03 15:35:31"
         }
     ],
     "packages-dev": [
@@ -52,9 +251,13 @@
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "jaz303/phake": 0
+        "jaz303/phake": 0,
+        "twig/twig": 0,
+        "jalle19/php-yui-compressor": 20,
+        "coffeescript/coffeescript": 0,
+        "leafo/lessphp": 0
     },
     "platform": {
         "php": ">=5.3.0"

@@ -12,8 +12,13 @@
 	],
 	"require": {
 		"php": ">=5.3.0",
-		"jaz303/phake": "@stable"
+		"jaz303/phake": "@stable",
+		"twig/twig": "@stable",
+		"jalle19/php-yui-compressor": "*@dev",
+		"coffeescript/coffeescript": "@stable",
+		"leafo/lessphp": "@stable"
 	},
+	"minimum-stability": "dev",
 	"scripts": {
 		"post-install-cmd": [
 			"if [ -L 'phake' ]; then unlink phake; fi",
