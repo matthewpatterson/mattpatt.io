@@ -1,0 +1,27 @@
+{
+	"name": "matthewpatterson/thatmattpattis.at",
+	"description": "My personal website",
+	"homepage": "http://thatmattpattis.at",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Matthew Patterson",
+			"email": "matthew.s.patterson@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"jaz303/phake": "@stable"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"if [ -L 'phake' ]; then unlink phake; fi",
+			"ln -s vendor/bin/phake"
+		],
+		"post-update-cmd": [
+			"if [ -L 'phake' ]; then unlink phake; fi",
+			"ln -s vendor/bin/phake"
+		]
+	}
+}
