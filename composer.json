@@ -12,11 +12,8 @@
 	],
 	"require": {
 		"php": ">=5.3.0",
-		"jaz303/phake": "@stable",
 		"twig/twig": "@stable",
-		"jalle19/php-yui-compressor": "*@dev",
-		"coffeescript/coffeescript": "@stable",
-		"leafo/lessphp": "@stable"
+		"jalle19/php-yui-compressor": "*@dev"
 	},
 	"minimum-stability": "dev",
 	"scripts": {

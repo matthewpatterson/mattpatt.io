@@ -1,0 +1,26 @@
+<h3>{{ job.company }}</h3>
+<div>
+    <h4>{{ job.title }}</h4>
+    From {{ job.dates.from }} to {{ job.dates.to }}
+    <ul>
+        {% for task in job.responsibilities %}
+            <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+    {% if job.samples is not empty %}
+        <h5>Work Samples</h5>
+        <ul>
+            {% for sample in job.samples %}
+                <li>
+                    <a href="{{ sample.link }}">{{ sample.name }}</a>
+                    {% if sample.attrs %}
+                        ({{ sample.attrs|join(', ') }})
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+{% if not loop.last %}
+    <hr/>
+{% endif %}

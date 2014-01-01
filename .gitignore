@@ -1,2 +1,3 @@
-phake
+build/*
 vendor
+.idea

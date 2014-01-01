@@ -1,0 +1,64 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>{% block title %}{% endblock %}Matthew Patterson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/build.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/build.css"/>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-links">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home">Matthew Patterson</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-links">
+            <ul class="nav navbar-nav">
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/skills">My Skills</a></li>
+                <li><a href="/work">My Work</a></li>
+                <li><a href="/projects">My Projects</a></li>
+                <li><a href="/contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block body %}{% endblock %}
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Where Is That Matt?</h2>
+                <ul class="contact">
+                    <li><a href="https://github.com/matthewpatterson"><span class="icon-social github"></span>github.com/matthewpatterson</a></li>
+                    <li><a href="https://www.linkedin.com/in/matthewspatterson"><span class="icon-social linked-in"></span>linkedin.com/in/matthewspatterson</a></li>
+                    <li><a href="https://twitter.com/mattspatterson"><span class="icon-social twitter"></span>@mattspatterson</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <p class="small">
+                    Built with modern technology and significant amounts of caffeine.  Source code is made available
+                    <a href="https://github.com/matthewpatterson/thatmattpattis.at" target="_blank">on GitHub</a>
+                    under the
+                    <a href="https://github.com/matthewpatterson/thatmattpattis.at/blob/master/LICENSE" target="_blank">MIT License</a>.
+                    Unless indicated otherwise, content is made available under
+                    <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC-BY-NC-ND License</a>,
+                    meaning you cannot use my r&eacute;sum&eacute; as your own, nor can you profit from it.
+                </p>
+                <p class="small">
+                    Copyright &copy; 2013-2014 Matthew Patterson.  All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
