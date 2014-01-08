@@ -11,6 +11,7 @@ compile($twig, '404.twig', '404.html');
 compile($twig, 'homepage.twig', 'home.html');
 compile($twig, 'about.twig', 'about.html');
 compile($twig, 'work.twig', 'work.html', model('jobs'));
+compile($twig, 'projects.twig', 'projects.html', model('projects'));
 compile($twig, 'contact.twig', 'contact.html');
 compile($twig, 'site.twig', 'this.html');
 

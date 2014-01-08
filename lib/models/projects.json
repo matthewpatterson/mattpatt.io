@@ -1,0 +1,42 @@
+{
+    "projects": {
+        "open_source": [
+            {
+                "name": "Checkmate",
+                "type": "application",
+                "headline": "Code Standards Enforcement Tool",
+                "labels": ["active", "unstable"],
+                "source": "",
+                "longdesc": [
+                    "Checkmate is an application to help enforce pre-defined coding standards.  It uses existing tools and aggregates violations into a single, consistent report."
+                ]
+            },
+            {
+                "name": "Lore",
+                "type": "library",
+                "headline": "Object-oriented LDAP in PHP",
+                "labels": ["inactive", "unstable"],
+                "source": "https://github.com/matthewpatterson/lore",
+                "longdesc": [
+                    "Lore is a PHP library that takes the pain out of working with LDAP."
+                ]
+            }
+        ],
+        "other": [
+            {
+                "name": "My Vim configuration",
+                "source": "https://github.com/matthewpatterson/conf"
+            },
+            {
+                "name": "revcat.php",
+                "source": "https://gist.github.com/matthewpatterson/e60cb3b45dd061cc189c",
+                "description": "A command line utility for parsing Subversion logs and generating merge commands"
+            },
+            {
+                "name": "mod_reptile",
+                "source": "https://gist.github.com/matthewpatterson/cc636fd423363486bf7d",
+                "description": "A lesson on sandbox security, courtesy of Apache's mod_substitute"
+            }
+        ]
+    }
+}

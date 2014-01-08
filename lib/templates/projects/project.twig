@@ -1,0 +1,41 @@
+<h3>{{ project.name }} {% if project.headline %}<small>{{ project.headline }}</small>{% endif %}</h3>
+
+<p class="project-labels">
+    {% if project.type == "library" %}
+        <span class="label label-primary" title="A code library meant to be included in other applications">Library</span>
+    {% elseif project.type == "application" %}
+        <span class="label label-primary" title="A self-contained, runnable product">Application</span>
+    {% endif %}
+
+    {% if "active" in project.labels %}
+        <span class="label label-info" title="Project is being actively developed and maintained">Active Development</span>
+    {% endif %}
+
+    {% if "inactive" in project.labels %}
+        <span class="label label-default" title="No recent activity on project">Inactive</span>
+    {% endif %}
+
+    {% if "stable" in project.labels %}
+        <span class="label label-success" title="Project has at least one stable version">Stable</span>
+    {% endif %}
+
+    {% if "unstable" in project.labels %}
+        <span class="label label-danger" title="Project is not stable; user assumes all risk">Unstable</span>
+    {% endif %}
+</p>
+
+{% if project.description %}
+    <p>{{ project.description }}</p>
+{% endif %}
+
+{% if project.longdesc is not empty %}
+    <div class="project-longdesc" data-project="{{ project.name }}">
+        {% for para in project.longdesc %}
+            <p>{{ para }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% if not loop.last %}
+    <hr/>
+{% endif %}
