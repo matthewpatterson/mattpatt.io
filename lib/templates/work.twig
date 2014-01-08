@@ -3,19 +3,67 @@
 {% block body %}
 <section class="container">
     <header class="page-header">
-        <h1>My Work <small></small></h1>
+        <h1>My Work</h1>
     </header>
     <div class="row">
         <div class="col-md-12">
-            <h2>Professional Experience</h2>
+            <ul class="list-inline">
+                <li>Jump to:</li>
+                <li><a href="#professional-experience">Professional Experience</a></li>
+                <li><a href="#volunteer-experience">Volunteer Experience</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 id="professional-experience">Professional Experience</h2>
             {% for job in jobs.professional %}
                 {% include "work/job.twig" with {'job': job} %}
             {% endfor %}
+
             <hr/>
-            <h2>Volunteer Experience</h2>
+            <div class="pull-right">
+                <small><a href="#"><span class="glyphicon glyphicon-chevron-up"></span> Top</a></small>
+            </div>
+
+            <h2 id="volunteer-experience">Volunteer Experience</h2>
             {% for job in jobs.volunteer %}
                 {% include "work/job.twig" with {'job': job} %}
             {% endfor %}
+
+            <hr/>
+            <div class="pull-right">
+                <small><a href="#"><span class="glyphicon glyphicon-chevron-up"></span> Top</a></small>
+            </div>
+
+            <h2 id="education">Education</h2>
+            <h4>University of Central Florida</h4>
+            <abbr title="Bachelor of Science in Business Administration">B.S.B.A.</abbr>, Accounting
+            <small>with a focus on Accounting Information Systems</small>
+            <h5>Involvement</h5>
+            <ul>
+                <li>
+                    <strong>Student Government Association</strong> &mdash; Senator<br/>
+                    <small>The deliberative body responsible for representing the interests of students and allocating
+                        more than $17 million in Activity &amp; Service Fee revenue</small>
+                </li>
+                <li>
+                    <strong>Equal at UCF</strong> &mdash; President<br/>
+                    <small>A social and advocacy organization for lesbian, gay, bisexual, and transgender students</small>
+                </li>
+                <li>
+                    <strong>Allies Program</strong> &mdash; Speaker<br/>
+                    <small>A training program for faculty and staff interested in showing visual support for lesbian,
+                        gay, bisexual, and transgender students</small>
+                </li>
+                <li>
+                    <strong>Progressive Council</strong> &mdash; Treasurer<br/>
+                    <small>An umbrella organization to foster collaboration among student groups that represent
+                        progressive values and work toward progressive goals</small>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
