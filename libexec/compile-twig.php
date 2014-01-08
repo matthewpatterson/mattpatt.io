@@ -12,6 +12,7 @@ compile($twig, 'homepage.twig', 'home.html');
 compile($twig, 'about.twig', 'about.html');
 compile($twig, 'work.twig', 'work.html', model('jobs'));
 compile($twig, 'contact.twig', 'contact.html');
+compile($twig, 'site.twig', 'this.html');
 
 /**
  * Compiles a Twig template and saves the resulting HTML
@@ -23,8 +24,10 @@ compile($twig, 'contact.twig', 'contact.html');
  */
 function compile(Twig_Environment $twig, $template, $outfile, array $model = array())
 {
+    printf('Compiling template %s to file %s ... ', $template, $outfile);
     $outfile = __DIR__ . '/../build/' . $outfile;
     file_put_contents($outfile, $twig->render($template, $model));
+    printf('done' . PHP_EOL);
 }
 
 /**
@@ -35,6 +38,7 @@ function compile(Twig_Environment $twig, $template, $outfile, array $model = arr
  */
 function model($name)
 {
+    printf('Loading model %s' . PHP_EOL, $name);
     $file = __DIR__ . '/../lib/models/' . $name . '.json';
     return json_decode(file_get_contents($file), true);
 }
