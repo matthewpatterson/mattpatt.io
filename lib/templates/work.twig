@@ -11,6 +11,7 @@
             {% for job in jobs.professional %}
                 {% include "work/job.twig" with {'job': job} %}
             {% endfor %}
+            <hr/>
             <h2>Volunteer Experience</h2>
             {% for job in jobs.volunteer %}
                 {% include "work/job.twig" with {'job': job} %}

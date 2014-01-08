@@ -1,25 +1,29 @@
 <h3>{{ job.company }}</h3>
-<div>
-    <h4>{{ job.title }}</h4>
-    From {{ job.dates.from }} to {{ job.dates.to }}
-    <ul>
-        {% for task in job.responsibilities %}
-            <li>{{ task }}</li>
-        {% endfor %}
-    </ul>
-    {% if job.samples is not empty %}
-        <h5>Work Samples</h5>
-        <ul>
-            {% for sample in job.samples %}
-                <li>
-                    <a href="{{ sample.link }}">{{ sample.name }}</a>
-                    {% if sample.attrs %}
-                        ({{ sample.attrs|join(', ') }})
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+<div class="job-company-group">
+    {% for position in job.positions %}
+        <h4>{{ position.title }}</h4>
+        <div class="job-position-group">
+            From {{ position.dates.from }} to {{ position.dates.to }}
+            <ul>
+                {% for task in position.responsibilities %}
+                    <li>{{ task }}</li>
+                {% endfor %}
+            </ul>
+            {% if position.samples is not empty %}
+                <h5>Work Samples</h5>
+                <ul>
+                    {% for sample in position.samples %}
+                        <li>
+                            <a href="{{ sample.link }}">{{ sample.name }}</a>
+                            {% if sample.attrs %}
+                                <small>{{ sample.attrs|join(', ') }}</small>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endfor %}
 </div>
 {% if not loop.last %}
     <hr/>
