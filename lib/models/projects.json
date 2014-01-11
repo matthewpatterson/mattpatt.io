@@ -20,6 +20,16 @@
                 "longdesc": [
                     "Lore is a PHP library that takes the pain out of working with LDAP."
                 ]
+            },
+            {
+                "name": "php-finance",
+                "type": "library",
+                "headline": "Proof-of-Concept PHP Extension",
+                "labels": ["active", "unstable"],
+                "source": "https://github.com/matthewpatterson/php-finance",
+                "longdesc": [
+                    "php-finance is a proof-of-concept PHP extension to add financial calculation functions, such as interest rate functions, present and future value, etc.  The primary purpose of this project is for me to learn how to build PHP extensions."
+                ]
             }
         ],
         "other": [
