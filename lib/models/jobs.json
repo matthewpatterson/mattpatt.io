@@ -5,21 +5,21 @@
                 "company": "BookIt.com",
                 "positions": [
                     {
-                        "title": "Web Developer and Team Facilitator",
+                        "title": "Scrum Master, Software Developer",
                         "dates": {
-                            "from": "Mar 2012",
+                            "from": "March 2012",
                             "to": "Present"
                         },
                         "responsibilities": [
-                            "Facilitated a team of 9 developers and software testers",
-                            "Provided architectural guidance to other developers",
-                            "Performed code reviews",
-                            "Implemented and maintained multiple payment platforms, including: two credit card gateways; an interface to American Express' CAS and CAPN systems; and interfaces to Google Wallet, PayPal, and Bill Me Later",
+                            "Lead a team of 9 developers and software testers",
+                            "Implemented and maintained multiple payment platforms: multiple credit card gateways, Google Wallet, PayPal, and Bill Me Later",
                             "Developed a system to automatically compute refunds and cancellation penalties",
                             "Added internationalization and multi-currency support",
                             "Added support for multi-level encryption of sensitive credit card information",
                             "Added white label product for affiliates to customize the look and feel of the website",
-                            "Developed multiple internal tools, including an implementation of PHP_CodeSniffer"
+                            "Developed multiple internal tools, including an implementation of PHP_CodeSniffer",
+                            "Implemented Jenkins for continuous integration and code quality reporting",
+                            "Started and facilitated an employee-driven training program"
                         ]
                     }
                 ]
@@ -30,16 +30,17 @@
                     {
                         "title": "Operations Accountant III",
                         "dates": {
-                            "from": "Oct 2010",
-                            "to": "Mar 2012"
+                            "from": "October 2010",
+                            "to": "March 2012"
                         },
                         "responsibilities": [
-                            "Supervised a program to recover revenue from insufficient funds transactions, including acceptance of payments and escalation of unpaid violations",
+                            "Supervised revenue recovery program for insufficient funds transactions, including payment acceptance and violation enforcement",
                             "Supervised 6 full-time employees",
                             "Prepared monthly reconciliations of cash funds and deposit accounts",
-                            "Assisted in development of new financial and operation reports, including writing business requirements and reviewing result sets",
+                            "Assisted in development of new financial and operation reports, including writing business requirements",
                             "Reviewed monthly and quarterly traffic and revenue reports to ensure accuracy of data",
-                            "Assisted with training presentations for the Chief Financial Office and senior accounting staff, including the development of training documents"
+                            "Assisted with training presentations for the Chief Financial Office and senior accounting staff, and developed training documents",
+                            "Documented internal controls related to toll collection"
                         ]
                     }
                 ]
@@ -51,11 +52,12 @@
                         "title": "Internal Audit Intern",
                         "dates": {
                             "from": "May 2010",
-                            "to": "Sep 2010"
+                            "to": "September 2010"
                         },
                         "responsibilities": [
                             "Tested various internal controls as part of a Sarbanes-Oxley compliance program",
-                            "Traveled to airport stations throughout the company's system for field audits to ensure compliance with company policies"
+                            "Tested internal controls related to purchasing, accounts payable and receivable, payroll, inventory, and fixed assets",
+                            "Traveled to airport stations for field audits to ensure compliance with company policies"
                         ]
                     }
                 ]
@@ -68,17 +70,32 @@
                     {
                         "title": "Director of Technology",
                         "dates": {
-                            "from": "Dec 2012",
-                            "to": "Jun 2013"
+                            "from": "December 2012",
+                            "to": "June 2013"
                         },
                         "responsibilities": [
-                            "Created the Information Systems Plan portion of the organization's bid to host Gay Games X in 2018"
+                            "Created the Information Systems Plan portion of the Orlando bid book",
+                            ""
                         ],
                         "samples": [
                             {
-                                "name": "Bid Book - Information Systems Plan (excerpt, edited)",
+                                "name": "Bid Book - Information Systems Plan (excerpt)",
                                 "link": "/assets/files/orlando2018-information-systems-plan-excerpt.pdf",
                                 "attrs": ["PDF", "222 KiB"]
+                            }
+                        ],
+                        "images": [
+                            {
+                                "thumb": "/assets/files/orlando2018-website-large.png",
+                                "link": "/assets/files/orlando2018-website-large.png",
+                                "alt": "Drupal 7 implementation for content management with a custom-designed responsive theme",
+                                "alt_title": "Orlando2018.com"
+                            },
+                            {
+                                "thumb": "/assets/files/orlando2018-bench-the-hate-large.png",
+                                "link": "/assets/files/orlando2018-bench-the-hate-large.png",
+                                "alt": "A single-page responsive website showcasing LGBTQ athletes",
+                                "alt_title": "Bench The Hate"
                             }
                         ]
                     }
@@ -90,8 +107,8 @@
                     {
                         "title": "Executive Director",
                         "dates": {
-                            "from": "Feb 2011",
-                            "to": "Oct 2013"
+                            "from": "February 2011",
+                            "to": "October 2013"
                         },
                         "responsibilities": [
                         ]

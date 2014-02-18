@@ -114,9 +114,41 @@
 
     <target name="make-css" depends="clean-css,compile-less,minify-css,concat-css"/>
 
+    <target name="compile-coffee" depends="clean-js">
+        <apply dir="${dir.lib}/scripts" executable="${tool.coffee}" parallel="false" failonerror="true">
+            <arg value="--compile"/>
+            <arg value="--output"/>
+            <arg path="${dir.js}"/>
+            <srcfile/>
+
+            <fileset dir="${dir.lib}/scripts">
+                <include name="*.coffee"/>
+            </fileset>
+        </apply>
+    </target>
+
+    <target name="minify-js">
+        <apply dir="${dir.js}" executable="java" parallel="false" failonerror="true">
+            <arg value="-jar"/>
+            <arg path="${tool.yui}"/>
+            <arg value="-o"/>
+            <targetfile/>
+            <srcfile/>
+
+            <fileset dir="${dir.js}">
+                <include name="*.js"/>
+            </fileset>
+            <mapper type="glob" from="*.js" to="${dir.js}/*.min.js"/>
+        </apply>
+    </target>
+
     <target name="concat-js">
         <concat destfile="${dir.js}/build.js">
             <union>
+                <fileset dir="${dir.js}">
+                    <include name="*.min.js"/>
+                    <exclude name="interactive.min.js"/>
+                </fileset>
                 <fileset dir="${dir.lib}/bootstrap/js">
                     <include name="*.min.js"/>
                 </fileset>
@@ -124,7 +156,7 @@
         </concat>
     </target>
 
-    <target name="make-js" depends="clean-js,concat-js"/>
+    <target name="make-js" depends="clean-js,compile-coffee,minify-js,concat-js"/>
 
     <target name="install-fonts" depends="clean-fonts">
         <copy todir="${dir.fonts}">

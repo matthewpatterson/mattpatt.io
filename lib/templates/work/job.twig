@@ -22,6 +22,14 @@
                     {% endfor %}
                 </ul>
             {% endif %}
+            {% if position.images %}
+                <h5>Gallery</h5>
+                <div class="gallery-container">
+                    {% for image in position.images %}
+                        <a href="{{ image.link }}"><img src="{{ image.thumb }}" alt="{{ image.alt }}" class="gallery-image img-thumbnail" data-toggle="popover" data-content="{{ image.alt }}" data-title="{{ image.alt_title }}"/></a>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
     {% endfor %}
 </div>

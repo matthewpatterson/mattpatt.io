@@ -1,3 +1,12 @@
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+  background-color: @start;
+  background-image: -webkit-linear-gradient(@origin, @start, @stop);
+  background-image: -moz-linear-gradient(@origin, @start, @stop);
+  background-image: -o-linear-gradient(@origin, @start, @stop);
+  background-image: -ms-linear-gradient(@origin, @start, @stop);
+  background-image: linear-gradient(@origin, @start, @stop);
+}
+
 .navbar-inverse .navbar-brand {
   color: #fff;
 }
@@ -61,5 +70,17 @@ footer {
 .project-labels {
   .label {
     cursor: help;
+  }
+}
+
+.gallery-container {
+  background: #999;
+  border-radius: 4px 4px 0px 0px;
+  padding: 8px;
+  .gradient(top, #d0d0d0, #e0e0e0);
+
+  .gallery-image {
+    margin: 0 8px;
+    width: 160px;
   }
 }
