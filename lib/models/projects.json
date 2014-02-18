@@ -14,7 +14,7 @@
             {
                 "name": "Lore",
                 "type": "library",
-                "headline": "Object-oriented LDAP in PHP",
+                "headline": "Object-Oriented LDAP in PHP",
                 "labels": ["inactive", "unstable"],
                 "source": "https://github.com/matthewpatterson/lore",
                 "longdesc": [
@@ -34,7 +34,7 @@
         ],
         "other": [
             {
-                "name": "My Vim configuration",
+                "name": "My dotfiles",
                 "source": "https://github.com/matthewpatterson/conf"
             },
             {
