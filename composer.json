@@ -15,15 +15,5 @@
 		"twig/twig": "@stable",
 		"jalle19/php-yui-compressor": "*@dev"
 	},
-	"minimum-stability": "dev",
-	"scripts": {
-		"post-install-cmd": [
-			"if [ -L 'phake' ]; then unlink phake; fi",
-			"ln -s vendor/bin/phake"
-		],
-		"post-update-cmd": [
-			"if [ -L 'phake' ]; then unlink phake; fi",
-			"ln -s vendor/bin/phake"
-		]
-	}
+	"minimum-stability": "dev"
 }
