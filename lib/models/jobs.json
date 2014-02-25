@@ -39,7 +39,7 @@
                             "Prepared monthly reconciliations of cash funds and deposit accounts",
                             "Assisted in development of new financial and operation reports, including writing business requirements",
                             "Reviewed monthly and quarterly traffic and revenue reports to ensure accuracy of data",
-                            "Assisted with training presentations for the Chief Financial Office and senior accounting staff, and developed training documents",
+                            "Assisted with training presentations for the Chief Financial Officer and senior accounting staff, and developed training documents",
                             "Documented internal controls related to toll collection"
                         ]
                     }
@@ -74,25 +74,27 @@
                             "to": "June 2013"
                         },
                         "responsibilities": [
+                            "Served on the Board of Directors for the Orlando bid committee",
                             "Created the Information Systems Plan portion of the Orlando bid book",
-                            ""
-                        ],
-                        "samples": [
-                            {
-                                "name": "Bid Book - Information Systems Plan (excerpt)",
-                                "link": "/assets/files/orlando2018-information-systems-plan-excerpt.pdf",
-                                "attrs": ["PDF", "222 KiB"]
-                            }
+                            "Set up, configured, and maintained Amazon EC2, RDS, and ElastiCache instances",
+                            "Set up and administered Redmine for issue tracking",
+                            "Implemented Drupal 7 for content management using a custom-designed theme"
                         ],
                         "images": [
                             {
-                                "thumb": "/assets/files/orlando2018-website-large.png",
+                                "thumb": "/assets/files/orlando2018-information-systems-plan-thumb.png",
+                                "link": "/assets/files/orlando2018-information-systems-plan-excerpt.pdf",
+                                "alt": "The strategic plan for all of the computer systems to be put in place if Orlando were successful in its bid (PDF, 222 KiB)",
+                                "alt_title": "Bid Book - Information Systems Plan (excerpt)"
+                            },
+                            {
+                                "thumb": "/assets/files/orlando2018-website-thumb.png",
                                 "link": "/assets/files/orlando2018-website-large.png",
                                 "alt": "Drupal 7 implementation for content management with a custom-designed responsive theme",
                                 "alt_title": "Orlando2018.com"
                             },
                             {
-                                "thumb": "/assets/files/orlando2018-bench-the-hate-large.png",
+                                "thumb": "/assets/files/orlando2018-bench-the-hate-thumb.png",
                                 "link": "/assets/files/orlando2018-bench-the-hate-large.png",
                                 "alt": "A single-page responsive website showcasing LGBTQ athletes",
                                 "alt_title": "Bench The Hate"
@@ -111,6 +113,12 @@
                             "to": "October 2013"
                         },
                         "responsibilities": [
+                            "Supervised all operations and activities of the organization",
+                            "Created and lead the Conference Host Selection Committee",
+                            "Served as the primary point-of-contact for FCPC Conference host committees",
+                            "Maintained all of the organization's financial, membership, and corporate records",
+                            "Served on the Board of Directors, including in leadership positions",
+                            "Wrote the organization's bylaws and numerous amendments to them"
                         ]
                     }
                 ]

@@ -9,8 +9,10 @@
                     <li>{{ task }}</li>
                 {% endfor %}
             </ul>
-            {% if position.samples is not empty %}
+            {% if position.samples is not empty or position.images is not empty %}
                 <h5>Work Samples</h5>
+            {% endif %}
+            {% if position.samples is not empty %}
                 <ul>
                     {% for sample in position.samples %}
                         <li>
@@ -22,8 +24,7 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-            {% if position.images %}
-                <h5>Gallery</h5>
+            {% if position.images is not empty %}
                 <div class="gallery-container">
                     {% for image in position.images %}
                         <a href="{{ image.link }}"><img src="{{ image.thumb }}" alt="{{ image.alt }}" class="gallery-image img-thumbnail" data-toggle="popover" data-content="{{ image.alt }}" data-title="{{ image.alt_title }}"/></a>
