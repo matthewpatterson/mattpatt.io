@@ -54,6 +54,24 @@ footer {
   border-radius: 16px;
   min-height: 600px;
   width: 100%;
+
+  @media (max-width: 767px) {
+    border-radius: 0;
+    margin: 0 -15px;
+    width: 767px;
+  }
+  @media (max-width: 640px) {
+    width: 640px;
+  }
+  @media (max-width: 480px) {
+    width: 480px;
+  }
+  @media (max-width: 360px) {
+    width: 360px;
+  }
+  @media (max-width: 320px) {
+    width: 320px;
+  }
 }
 
 .manpage {
@@ -62,7 +80,7 @@ footer {
   font-size: 65%;
   font-weight: normal;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 45%;
   }
 }
