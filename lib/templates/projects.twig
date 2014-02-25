@@ -8,9 +8,33 @@
         <div class="row">
             <div class="col-md-12">
 
-                <h2 id="open-source">Open Source</h2>
+                <h2 id="open-source">Open Source Projects</h2>
                 {% for project in projects.open_source %}
                     {% include "projects/project.twig" with {'project': project} %}
+                {% endfor %}
+                <hr/>
+
+                <h2 id="presentations">Presentations</h2>
+                {% for presentation in presentations %}
+                    <h3>{{ presentation.title }}</h3>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="{{ presentation.link }}"><img src="{{ presentation.thumb }}" alt="{{ presentation.title }}" class="presentation-image img-thumbnail"/></a>
+                        </div>
+                        <div class="col-md-9">
+                            <p>
+                                {{ presentation.description }}
+                            </p>
+                            <p>
+                                {% if presentation.performances|length > 1 %}
+                                First presented
+                                {% else %}
+                                Presented
+                                {% endif %}
+                                on {{ presentation.performances[0].date }} at {{ presentation.performances[0].location }}
+                            </p>
+                        </div>
+                    </div>
                 {% endfor %}
                 <hr/>
 

@@ -8,17 +8,7 @@
                 "labels": ["active", "unstable"],
                 "source": "",
                 "longdesc": [
-                    "Checkmate is an application to help enforce pre-defined coding standards.  It uses existing tools and aggregates violations into a single, consistent report."
-                ]
-            },
-            {
-                "name": "Lore",
-                "type": "library",
-                "headline": "Object-Oriented LDAP in PHP",
-                "labels": ["inactive", "unstable"],
-                "source": "https://github.com/matthewpatterson/lore",
-                "longdesc": [
-                    "Lore is a PHP library that takes the pain out of working with LDAP."
+                    "Checkmate is an application to help enforce pre-defined coding standards.  It uses existing tools, such as PHP_CodeSniffer, and aggregates violations into a single, consistent report.  It is designed to be run from a command line or pre-commit/pre-receive hook, but can be adapted to almost any setting."
                 ]
             },
             {
@@ -30,12 +20,23 @@
                 "longdesc": [
                     "php-finance is a proof-of-concept PHP extension to add financial calculation functions, such as interest rate functions, present and future value, etc.  The primary purpose of this project is for me to learn how to build PHP extensions."
                 ]
+            },
+            {
+                "name": "Lore",
+                "type": "library",
+                "headline": "Object-Oriented LDAP in PHP",
+                "labels": ["inactive", "unstable"],
+                "source": "https://github.com/matthewpatterson/lore",
+                "longdesc": [
+                    "Lore is a PHP library that takes the pain out of working with LDAP."
+                ]
             }
         ],
         "other": [
             {
                 "name": "My dotfiles",
-                "source": "https://github.com/matthewpatterson/conf"
+                "source": "https://github.com/matthewpatterson/dotfiles",
+                "description": "Various configuration files that make my life easier"
             },
             {
                 "name": "revcat.php",
@@ -48,5 +49,19 @@
                 "description": "A lesson on sandbox security, courtesy of Apache's mod_substitute"
             }
         ]
-    }
+    },
+    "presentations": [
+        {
+            "title": "Red Light Green Light",
+            "link": "/assets/files/red-light-green-light-presentation.pdf",
+            "description": "This introduction to unit testing and test driven development ",
+            "thumb": "/assets/images/red-light-green-light-thumb.png",
+            "performances": [
+                {
+                    "date": "2013-10-01",
+                    "location": "the BookIt.com Maitland Office"
+                }
+            ]
+        }
+    ]
 }
