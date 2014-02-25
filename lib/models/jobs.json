@@ -82,19 +82,19 @@
                         ],
                         "images": [
                             {
-                                "thumb": "/assets/files/orlando2018-information-systems-plan-thumb.png",
+                                "thumb": "/assets/images/orlando2018-information-systems-plan-thumb.png",
                                 "link": "/assets/files/orlando2018-information-systems-plan-excerpt.pdf",
                                 "alt": "The strategic plan for all of the computer systems to be put in place if Orlando were successful in its bid (PDF, 222 KiB)",
                                 "alt_title": "Bid Book - Information Systems Plan (excerpt)"
                             },
                             {
-                                "thumb": "/assets/files/orlando2018-website-thumb.png",
+                                "thumb": "/assets/images/orlando2018-website-thumb.png",
                                 "link": "/assets/files/orlando2018-website-large.png",
                                 "alt": "Drupal 7 implementation for content management with a custom-designed responsive theme",
                                 "alt_title": "Orlando2018.com"
                             },
                             {
-                                "thumb": "/assets/files/orlando2018-bench-the-hate-thumb.png",
+                                "thumb": "/assets/images/orlando2018-bench-the-hate-thumb.png",
                                 "link": "/assets/files/orlando2018-bench-the-hate-large.png",
                                 "alt": "A single-page responsive website showcasing LGBTQ athletes",
                                 "alt_title": "Bench The Hate"
