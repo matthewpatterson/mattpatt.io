@@ -18,14 +18,11 @@
                 {% for presentation in presentations %}
                     <h3>{{ presentation.title }}</h3>
                     <div class="row">
-                        <div class="col-md-3">
-                            <a href="{{ presentation.link }}"><img src="{{ presentation.thumb }}" alt="{{ presentation.title }}" class="presentation-image img-thumbnail"/></a>
-                        </div>
                         <div class="col-md-9">
                             <p>
                                 {{ presentation.description }}
                             </p>
-                            <p>
+                            <p class="small">
                                 {% if presentation.performances|length > 1 %}
                                 First presented
                                 {% else %}
@@ -33,6 +30,9 @@
                                 {% endif %}
                                 on {{ presentation.performances[0].date }} at {{ presentation.performances[0].location }}
                             </p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="{{ presentation.link }}"><img src="{{ presentation.thumb }}" alt="{{ presentation.title }}" class="presentation-image img-thumbnail"/></a>
                         </div>
                     </div>
                 {% endfor %}

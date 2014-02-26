@@ -54,12 +54,12 @@
         {
             "title": "Red Light Green Light",
             "link": "/assets/files/red-light-green-light-presentation.pdf",
-            "description": "This introduction to unit testing and test driven development ",
+            "description": "This presentation serves as an introduction to unit testing and test driven development.  It covers basic principles of unit testing that can be applied to any language and testing framework, as well as the benefits of test-driven development.",
             "thumb": "/assets/images/red-light-green-light-thumb.png",
             "performances": [
                 {
-                    "date": "2013-10-01",
-                    "location": "the BookIt.com Maitland Office"
+                    "date": "October 16, 2013",
+                    "location": "the BookIt.com Maitland, FL Office"
                 }
             ]
         }

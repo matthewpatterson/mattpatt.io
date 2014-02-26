@@ -22,6 +22,10 @@
     {% if "unstable" in project.labels %}
         <span class="label label-danger" title="Project is not stable; user assumes all risk">Unstable</span>
     {% endif %}
+
+    {% if project.source %}
+        <span class="label label-"><a href="{{ project.source }}"><span class="glyphicon glyphicon-link"></span> Source Code</a></span>
+    {% endif %}
 </p>
 
 {% if project.description %}
