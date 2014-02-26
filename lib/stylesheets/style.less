@@ -7,6 +7,22 @@
   background-image: linear-gradient(@origin, @start, @stop);
 }
 
+.grayscale {
+  /* Thanks to Karl Horky for this
+   * http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html
+   */
+  filter: grayscale(100%);
+  filter: gray; /* IE6-9 */
+  /*filter: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxmaWx0ZXIgaWQ9J2dyYXlzY2FsZSc+PGZlQ29sb3JNYXRyaXggdHlwZT0nbWF0cml4JyB2YWx1ZXM9JzAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCcvPjwvZmlsdGVyPjwvc3ZnPiNncmF5c2NhbGU="); /* Firefox 10+, Firefox on Android */
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+.nograyscale {
+  /*filter: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz1cJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCc+PGZpbHRlciBpZD1cJ2dyYXlzY2FsZVwnPjxmZUNvbG9yTWF0cml4IHR5cGU9XCdtYXRyaXhcJyB2YWx1ZXM9XCcxIDAgMCAwIDAsIDAgMSAwIDAgMCwgMCAwIDEgMCAwLCAwIDAgMCAxIDBcJy8+PC9maWx0ZXI+PC9zdmc+I2dyYXlzY2FsZQ==");*/
+  filter: grayscale(0%);
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
 .navbar-inverse .navbar-brand {
   color: #fff;
 }
@@ -49,6 +65,54 @@ footer {
   }
 }
 
+.manpage {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  p.lead {
+    font-weight: 700;
+    margin: 1em 0;
+    padding-left: 0;
+    text-transform: uppercase;
+  }
+  p, ul {
+    font-size: 0.8em;
+    margin-bottom: 0;
+    padding-left: 40px;
+    @media (max-width: 767px) {
+      font-size: 0.6em;
+      padding-left: 20px;
+    }
+  }
+  ul {
+    list-style-type: none;
+    li {
+      line-height: 1.4em;
+    }
+    li:before {
+      display: inline-block;
+      content: "- ";
+      margin-left: -1em;
+      width: 1em;
+    }
+  }
+}
+
+.homepage-images {
+  .img-rounded {
+    margin-bottom: 4px;
+    width: 208px;
+    height: 150px;
+
+    .grayscale();
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -webkit-backface-visibility: hidden;
+
+    &:hover {
+      .nograyscale();
+    }
+  }
+}
+
 #contact-form {
   border: none;
   border-radius: 16px;
@@ -74,7 +138,7 @@ footer {
   }
 }
 
-.manpage {
+.trmlike {
   color: #999;
   display: inline-block;
   font-size: 65%;
@@ -111,4 +175,7 @@ footer {
   height: 132px;
   width: 100%;
   box-sizing: border-box;
+  @media (max-width: 991px) {
+    width: auto;
+  }
 }

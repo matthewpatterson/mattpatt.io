@@ -1,12 +1,34 @@
 {% extends "layout.twig" %}
 {% block body %}
 <section class="container">
-    <header class="page-header">
-        <h1>Matthew Patterson <small>Tagline goes here</small></h1>
-    </header>
     <div class="row">
-        <div class="col-md-12">
-            Lorem ipsum dolor sit amet
+        <div class="col-md-9 jumbotron manpage">
+            <h1>mattpatt(1)</h1>
+
+            <p class="lead">Name</p>
+            <p>
+                Matthew Patterson - A software developer and LGBT activist in Orlando, Florida
+            </p>
+
+            <p class="lead">Synopsis</p>
+            <ul>
+                <li>Scrum Master and Developer at BookIt.com</li>
+                <li>Experienced with PHP, JavaScript, and CoffeeScript</li>
+                <li>B.S.B.A. in Accounting from the University of Central Florida</li>
+            </ul>
+
+            <p class="lead">See Also</p>
+            <ul>
+                <li><a href="https://github.com/matthewpatterson">GitHub(7)</a></li>
+                <li><a href="https://www.linkedin.com/in/matthewspatterson">LinkedIn(7)</a></li>
+                <li><a href="https://twitter.com/mattpattwhereat">Twitter(7)</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 homepage-images">
+            <img src="/assets/images/homepage-photo-1.jpg" class="img-rounded hidden-xs hidden-sm"/>
+            <img src="/assets/images/homepage-photo-2.jpg" class="img-rounded hidden-xs hidden-sm"/>
+            <img src="/assets/images/homepage-photo-3.jpg" class="img-rounded hidden-xs hidden-sm"/>
+            <img src="/assets/images/homepage-photo-4.jpg" class="img-rounded hidden-xs hidden-sm"/>
         </div>
     </div>
 </section>
