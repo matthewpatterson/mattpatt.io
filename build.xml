@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="thatmattpattis.at" default="make">
 
-    <property name="dir.build" value="${basedir}/build"/>
+    <property name="dir.build" value="${basedir}/public"/>
     <property name="dir.js" value="${dir.build}/assets/js"/>
     <property name="dir.css" value="${dir.build}/assets/css"/>
     <property name="dir.fonts" value="${dir.build}/assets/fonts"/>
@@ -10,15 +10,9 @@
 
     <property name="dir.lib" value="${basedir}/lib"/>
 
-    <property name="tool.less" value="/usr/local/bin/lessc"/>
-    <property name="tool.coffee" value="/usr/bin/coffee"/>
-    <property name="tool.yui" value="${basedir}/vendor/nervo/yuicompressor/yuicompressor.jar"/>
-
-    <target name="clean-html">
-        <delete includeemptydirs="true">
-            <fileset dir="${dir.build}" includes="*.html, **/*.html" defaultexcludes="false"/>
-        </delete>
-    </target>
+    <property name="tool.less" value="lessc"/>
+    <property name="tool.coffee" value="coffee"/>
+	<property name="tool.yui" value="/home/matthewpatterson/.rvm/gems/ruby-2.1.2/gems/yui-compressor-0.12.0/lib/yuicompressor-2.4.8.jar"/>
 
     <target name="clean-css">
         <delete includeemptydirs="true">
@@ -50,7 +44,7 @@
         </delete>
     </target>
 
-    <target name="clean" depends="clean-html,clean-css,clean-js,clean-fonts,clean-images,clean-files"/>
+    <target name="clean" depends="clean-css,clean-js,clean-fonts,clean-images,clean-files"/>
 
     <target name="prepare">
         <mkdir dir="${dir.build}"/>
@@ -60,12 +54,6 @@
         <mkdir dir="${dir.fonts}"/>
         <mkdir dir="${dir.images}"/>
         <mkdir dir="${dir.files}"/>
-    </target>
-
-    <target name="compile-html" depends="clean-html">
-        <exec executable="php" failonerror="true">
-            <arg path="${basedir}/libexec/compile-twig.php"/>
-        </exec>
     </target>
 
     <target name="compile-less" depends="clean-css">
@@ -182,6 +170,6 @@
         </copy>
     </target>
 
-    <target name="make" depends="prepare,clean,compile-html,make-css,make-js,install-fonts,install-images,install-files"/>
+    <target name="make" depends="prepare,clean,make-css,make-js,install-fonts,install-images,install-files"/>
 
 </project>

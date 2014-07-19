@@ -1,7 +1,7 @@
 <!DOCTYPE html >
 <html>
 <head>
-    <title>{% block title %}{% endblock %}Matthew Patterson</title>
+    <title><%= @title %>Matthew Patterson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700"/>
@@ -12,7 +12,7 @@
     <script type="text/javascript" src="/assets/js/build.js"></script>
 </head>
 <body>
-{% include "analytics.twig" %}
+<%= erb :analytics %>
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -34,7 +34,7 @@
         </div>
     </div>
 </nav>
-{% block body %}{% endblock %}
+<%= yield %>
 <footer>
     <div class="container">
         <div class="row">
