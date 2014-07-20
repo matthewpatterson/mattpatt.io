@@ -2,13 +2,27 @@
     "jobs": {
         "professional": [
             {
+                "company": "Braintree",
+                "positions": [
+                    {
+                        "title": "Software Engineer",
+                        "dates": {
+                            "from": "April 2014",
+                            "to": "Present"
+                        },
+                        "responsibilities": [
+                        ]
+                    }
+                ]
+            },
+            {
                 "company": "BookIt.com",
                 "positions": [
                     {
-                        "title": "Scrum Master, Software Developer",
+                        "title": "Scrum Master, Team Lead, Software Developer",
                         "dates": {
                             "from": "March 2012",
-                            "to": "Present"
+                            "to": "April 2014"
                         },
                         "responsibilities": [
                             "Lead a team of 9 developers and software testers",
