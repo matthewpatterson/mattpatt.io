@@ -1,3 +1,9 @@
+def model(name)
+  root = File.dirname(__FILE__)
+  json = File.read(File.join(root, "lib", "models", name))
+  JSON.parse(json, symbolize_names: true)
+end
+
 get "/home" do
   erb :homepage
 end
@@ -5,6 +11,12 @@ end
 get "/about" do
   @title = "About Me - "
   erb :about
+end
+
+get "/work" do
+  @title = "My Work - "
+  @jobs = model("jobs.json")[:jobs]
+  erb :work
 end
 
 get "/this" do
