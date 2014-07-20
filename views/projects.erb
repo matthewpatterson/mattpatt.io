@@ -1,0 +1,50 @@
+<section class="container">
+    <header class="page-header">
+        <h1>My Projects</h1>
+    </header>
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 id="open-source">Open Source Projects</h2>
+            <% @projects[:projects][:open_source].each do |project| %>
+                <%= erb :_project, locals: {project: project} %>
+            <% end %>
+            <hr/>
+
+            <h2 id="presentations">Presentations</h2>
+            <% @projects[:presentations].each do |presentation| %>
+                <h3><%= presentation[:title] %></h3>
+                <div class="row">
+                    <div class="col-md-9">
+                        <p>
+                            <%= presentation[:description] %>
+                        </p>
+                        <p class="small">
+                            <% if presentation[:performances].length > 1 %>
+                            First presented
+                            <% else %>
+                            Presented
+                            <% end %>
+                            on <%= presentation[:performances].first[:date] %> at <%= presentation[:performances].first[:location] %>
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="<%= presentation[:link] %>"><img src="<%= presentation[:thumb] %>" alt="<%= presentation[:title] %>" class="presentation-image img-thumbnail"/></a>
+                    </div>
+                </div>
+            <% end %>
+            <hr/>
+
+            <h2 id="other">Other Items of Interest</h2>
+            <ul>
+            <% @projects[:projects][:other].each do |project| %>
+                <li>
+                    <a href="<%= project[:source] %>"><%= project[:name] %></a>
+                    <% if project[:description] %>&mdash; <%= project[:description] %><% end %>
+                </li>
+            <% end %>
+            </ul>
+
+        </div>
+    </div>
+</section>

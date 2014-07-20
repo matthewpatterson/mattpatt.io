@@ -6,7 +6,6 @@
                 "type": "application",
                 "headline": "Code Standards Enforcement Tool",
                 "labels": ["active", "unstable"],
-                "source": "",
                 "longdesc": [
                     "Checkmate is an application to help enforce pre-defined coding standards.  It uses existing tools, such as PHP_CodeSniffer, and aggregates violations into a single, consistent report.  It is designed to be run from a command line or pre-commit/pre-receive hook, but can be adapted to almost any setting."
                 ]

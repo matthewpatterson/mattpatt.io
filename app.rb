@@ -19,6 +19,12 @@ get "/work" do
   erb :work
 end
 
+get "/projects" do
+  @title = "My Projects - "
+  @projects = model("projects.json")
+  erb :projects
+end
+
 get "/this" do
   @title = "About This Site - "
   erb :site

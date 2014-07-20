@@ -1,0 +1,41 @@
+<h3><%= project[:name] %> <% if project[:headline] %><small><%= project[:headline] %></small><% end %></h3>
+
+<p class="project-labels">
+    <% if project[:type] == "library" %>
+        <span class="label label-primary" title="A code library meant to be included in other applications">Library</span>
+    <% elsif project[:type] == "application" %>
+        <span class="label label-primary" title="A self-contained, runnable product">Application</span>
+    <% end %>
+
+    <% if project[:labels].include?("active") %>
+        <span class="label label-info" title="Project is being actively developed and maintained">Active Development</span>
+    <% end %>
+
+    <% if project[:labels].include?("inactive") %>
+        <span class="label label-default" title="No recent activity on project">Inactive</span>
+    <% end %>
+
+    <% if project[:labels].include?("stable") %>
+        <span class="label label-success" title="Project has at least one stable version">Stable</span>
+    <% end %>
+
+    <% if project[:labels].include?("unstable") %>
+        <span class="label label-danger" title="Project is not stable; user assumes all risk">Unstable</span>
+    <% end %>
+
+    <% unless project[:source].nil? %>
+        <span class="label label-"><a href="<%= project[:source] %>"><span class="glyphicon glyphicon-link"></span> Source Code</a></span>
+    <% end %>
+</p>
+
+<% unless project[:description].nil? %>
+    <p><%= project[:description] %></p>
+<% end %>
+
+<% unless project[:longdesc].empty? %>
+    <div class="project-longdesc" data-project="<%= project[:name] %>">
+        <% project[:longdesc].each do |para| %>
+            <p><%= para %></p>
+        <% end %>
+    </div>
+<% end %>
