@@ -25,6 +25,11 @@ get "/projects" do
   erb :projects
 end
 
+get "/contact" do
+  @title = "Contact Me - "
+  erb :contact
+end
+
 get "/this" do
   @title = "About This Site - "
   erb :site
