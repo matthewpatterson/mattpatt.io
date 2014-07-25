@@ -1,13 +1,18 @@
 require "uglifier"
 require "cssminify"
 
-ASSETS_DIR = File.join(File.dirname(__FILE__), "lib")
+ASSETS_DIR = File.join(File.dirname(__FILE__), "public", "assets")
 TMP_DIR = File.join(File.dirname(__FILE__), "tmp")
 
 namespace :assets do
   namespace :js do
+    desc "Clean tmp directory"
+    task :clean_tmp do
+      `rm -rf #{TMP_DIR}/js`
+    end
+
     desc "Compile CoffeeScript files into minified JavaScript"
-    task :compile do
+    task :compile => :clean_tmp do
       uglifier = Uglifier.new
 
       exclude = ["interactive.coffee"]
@@ -33,13 +38,18 @@ namespace :assets do
   end
 
   namespace :css do
+    desc "Clean tmp directory"
+    task :clean_tmp do
+      `rm -rf #{TMP_DIR}/css`
+    end
+
     desc "Prepare Twitter Bootstrap"
     task :prepare_bootstrap do
       `cat #{ASSETS_DIR}/bootstrap/css/bootstrap.min.css > #{ASSETS_DIR}/css/build.css`
     end
 
     desc "Compile LESS files into minified CSS"
-    task :compile => :prepare_bootstrap do
+    task :compile => [:clean_tmp, :prepare_bootstrap] do
       compressor = CSSminify.new
 
       Dir.chdir("#{ASSETS_DIR}/css") do
