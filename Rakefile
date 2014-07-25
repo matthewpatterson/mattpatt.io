@@ -73,3 +73,5 @@ namespace :assets do
   desc "Compile all static assets"
   task :compile => ["js:compile", "css:compile"]
 end
+
+task :default => "assets:compile"
