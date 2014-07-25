@@ -1,6 +1,6 @@
 def model(name)
   root = File.dirname(__FILE__)
-  json = File.read(File.join(root, "lib", "models", name))
+  json = File.read(File.join(root, "models", name))
   JSON.parse(json, symbolize_names: true)
 end
 
