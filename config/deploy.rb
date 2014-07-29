@@ -34,8 +34,16 @@ namespace :deploy do
   task :start do
     on roles(:web), in: :sequence, wait: 5 do
       within release_path do
-        execute :mkdir, "tmp/sockets"
         execute :bundle, :exec, :thin, :start, "--config", release_path.join("config", "thin.yml")
+      end
+    end
+  end
+
+  desc 'Stop application'
+  task :stop do
+    on roles(:web), in: :sequence, wait: 5 do
+      within release_path do
+        execute :bundle, :exec, :thin, :stop, "--config", release_path.join("config", "thin.yml")
       end
     end
   end
@@ -44,7 +52,6 @@ namespace :deploy do
   task :restart do
     on roles(:web), in: :sequence, wait: 5 do
       within release_path do
-        execute :mkdir, "tmp/sockets"
         execute :bundle, :exec, :thin, :restart, "--config", release_path.join("config", "thin.yml"), "--onebyone"
       end
     end
