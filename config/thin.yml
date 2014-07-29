@@ -3,7 +3,7 @@ group: deploy
 pid: tmp/pids/thin.pid
 timeout: 30
 wait: 30
-log: log/thin.log
+log: /var/log/thatmattpattis.at/thin.log
 max_conns: 1024
 require: []
 environment: production
@@ -12,5 +12,5 @@ servers: 3
 threaded: true
 no-epoll: true
 daemonize: true
-socket: tmp/sockets/thin.sock
+socket: /var/run/thatmattpattis.at/thin.sock
 chdir: /home/deploy/thatmattpattis.at/current
