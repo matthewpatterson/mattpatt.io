@@ -30,23 +30,26 @@ namespace :deploy do
     end
   end
 
+  desc 'Start application'
+  task :start do
+    on roles(:web), in: :sequence, wait: 5 do
+      within release_path do
+        execute :mkdir, "tmp/sockets"
+        execute :bundle, :exec, :thin, :start, "--config", release_path.join("config", "thin.yml")
+      end
+    end
+  end
+
   desc 'Restart application'
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+    on roles(:web), in: :sequence, wait: 5 do
+      within release_path do
+        execute :mkdir, "tmp/sockets"
+        execute :bundle, :exec, :thin, :restart, "--config", release_path.join("config", "thin.yml"), "--onebyone"
+      end
     end
   end
 
   after :publishing, :restart
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
 
 end
