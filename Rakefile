@@ -41,6 +41,7 @@ namespace :assets do
     desc "Clean tmp directory"
     task :clean_tmp do
       `rm -rf #{TMP_DIR}/css`
+      `mkdir #{TMP_DIR}/css`
     end
 
     desc "Prepare Twitter Bootstrap"
