@@ -44,13 +44,8 @@ namespace :assets do
       `mkdir #{TMP_DIR}/css`
     end
 
-    desc "Prepare Twitter Bootstrap"
-    task :prepare_bootstrap do
-      `cat #{ASSETS_DIR}/bootstrap/css/bootstrap.min.css > #{ASSETS_DIR}/css/build.css`
-    end
-
     desc "Compile LESS files into minified CSS"
-    task :compile => [:clean_tmp, :prepare_bootstrap] do
+    task :compile => :clean_tmp do
       compressor = CSSminify.new
 
       Dir.chdir("#{ASSETS_DIR}/css") do
