@@ -32,7 +32,7 @@
     <p><%= project[:description] %></p>
 <% end %>
 
-<% unless project[:longdesc].empty? %>
+<% unless project[:longdesc].nil? %>
     <div class="project-longdesc" data-project="<%= project[:name] %>">
         <% project[:longdesc].each do |para| %>
             <p><%= para %></p>
