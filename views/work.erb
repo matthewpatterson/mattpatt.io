@@ -16,7 +16,7 @@
         <div class="col-md-12">
 
             <h2 id="professional-experience">Professional Experience</h2>
-            <% @jobs[:professional].each do |job| %>
+            <% @jobs[:professional].reject { |job| job[:archived] }.each do |job| %>
               <%= erb :_job, :locals => {job: job} %>
             <% end %>
 

@@ -74,7 +74,8 @@
                             "Traveled to airport stations for field audits to ensure compliance with company policies"
                         ]
                     }
-                ]
+                ],
+                "archived": true
             }
         ],
         "volunteer": [
