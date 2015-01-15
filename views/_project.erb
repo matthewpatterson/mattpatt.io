@@ -23,16 +23,28 @@
         <span class="label label-danger" title="Project is not stable; user assumes all risk">Unstable</span>
     <% end %>
 
-    <% unless project[:source].nil? %>
-        <span class="label label-"><a href="<%= project[:source] %>"><span class="glyphicon glyphicon-link"></span> Source Code</a></span>
+    <% if project[:source] %>
+        <span class="label"><a href="<%= project[:source] %>"><span class="glyphicon glyphicon-link"></span> Source Code</a></span>
+    <% end %>
+
+    <% if project[:rubygems] %>
+        <span class="label"><a href="https://rubygems.org/gems/<%= project[:rubygems] %>"><span class="glyphicon glyphicon-download"></span> RubyGems</a></span>
+    <% end %>
+
+    <% if project[:packagist] %>
+        <span class="label"><a href="https://packagist.org/packages/<%= project[:packagist] %>"><span class="glyphicon glyphicon-download"></span> Packagist</a></span>
+    <% end %>
+
+    <% if project[:roadmap] %>
+        <span class="label"><a href="https://trello.com/b/<%= project[:roadmap] %>"><span class="glyphicon glyphicon-tasks"></span> Roadmap</a></span>
     <% end %>
 </p>
 
-<% unless project[:description].nil? %>
+<% if project[:description] %>
     <p><%= project[:description] %></p>
 <% end %>
 
-<% unless project[:longdesc].nil? %>
+<% if project[:longdesc] %>
     <div class="project-longdesc" data-project="<%= project[:name] %>">
         <% project[:longdesc].each do |para| %>
             <p><%= para %></p>
