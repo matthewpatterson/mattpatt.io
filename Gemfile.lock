@@ -13,17 +13,17 @@ GEM
       sshkit (~> 1.2)
     colorize (0.7.3)
     cssminify (1.0.2)
-    daemons (1.1.9)
-    eventmachine (1.0.3)
     execjs (2.2.1)
     i18n (0.6.11)
     json (1.8.1)
+    kgio (2.10.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    raindrops (0.15.0)
     rake (10.3.2)
     shotgun (0.9)
       rack (>= 1.0)
@@ -35,14 +35,14 @@ GEM
       colorize
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    thin (1.6.2)
-      daemons (>= 1.0.9)
-      eventmachine (>= 1.0.0)
-      rack (>= 1.0.0)
     tilt (1.4.1)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unicorn (4.9.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -54,5 +54,8 @@ DEPENDENCIES
   cssminify (= 1.0.2)
   shotgun (= 0.9)
   sinatra (= 1.4.5)
-  thin (= 1.6.2)
   uglifier (= 2.5.3)
+  unicorn (= 4.9.0)
+
+BUNDLED WITH
+   1.10.6

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'thin', '1.6.2'
+gem 'unicorn', '4.9.0'
 gem 'sinatra', '1.4.5'
 
 group :development do

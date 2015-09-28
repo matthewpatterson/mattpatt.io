@@ -1,3 +1,5 @@
+require "sinatra"
+
 def model(name)
   root = File.dirname(__FILE__)
   json = File.read(File.join(root, "models", name))
