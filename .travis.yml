@@ -1,0 +1,20 @@
+sudo: required
+
+language: ruby
+
+services:
+ - docker
+
+env:
+  - DOCKER_TAG="matthewpatterson/mattpatt.io:${TRAVIS_COMMIT:0:7}"
+
+before_script:
+  - docker login -e="$DOCKERHUB_EMAIL" -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
+  - echo "Building docker tag $DOCKER_TAG"
+  - docker build -t $DOCKER_TAG .
+
+install: /bin/true
+script: /bin/true
+
+after_script:
+  - docker push $DOCKER_TAG
