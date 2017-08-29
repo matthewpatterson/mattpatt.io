@@ -1,5 +1,6 @@
 DOCKER=docker
 COMPOSE=docker-compose
+REVISION=$(shell git rev-parse --short HEAD | tr -d "\n")
 
 compose_build:
 	$(COMPOSE) build
@@ -8,8 +9,12 @@ run: compose_build
 	$(COMPOSE) up
 
 build:
-	$(DOCKER) build -t profile .
-	$(DOCKER) build -t nginx config/nginx
+	$(DOCKER) build -t "matthewpatterson/mattpatt.io:$(REVISION)" .
+	$(DOCKER) build -t "matthewpatterson/mattpatt.io_nginx:$(REVISION)" config/nginx
+
+push:
+	$(DOCKER) push "matthewpatterson/mattpatt.io:$(REVISION)"
+	$(DOCKER) push "matthewpatterson/mattpatt.io_nginx:$(REVISION)"
 
 save: build
 	$(DOCKER) run -d profile:latest

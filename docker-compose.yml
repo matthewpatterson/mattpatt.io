@@ -1,4 +1,4 @@
-app:
+mattpatt_io:
   build: .
   ports:
     - "8000:8000"
@@ -7,4 +7,4 @@ nginx:
   ports:
     - "80:80"
   links:
-    - app:app
+    - mattpatt_io:mattpatt_io
