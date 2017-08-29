@@ -3,7 +3,7 @@
 lock '3.2.1'
 
 set :application, 'thatmattpattis.at'
-set :repo_url, 'git@github.com:matthewpatterson/thatmattpattis.at.git'
+set :repo_url, 'git@github.com:atmattpatt/mattpatt.io'
 
 # Default branch is :master
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call

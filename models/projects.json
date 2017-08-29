@@ -2,18 +2,18 @@
     "projects": {
         "open_source": [
             {
-                "name": "thatmattpattis.at",
+                "name": "mattpatt.io",
                 "type": "application",
                 "headline": "My personal website",
                 "labels": ["active", "stable"],
-                "source": "https://github.com/matthewpatterson/thatmattpattis.at"
+                "source": "https://github.com/atmattpatt/mattpatt.io"
             },
             {
                 "name": "howard",
                 "type": "library",
                 "headline": "An unofficial client library for the Chicago Transit Authority's Train Tracker API",
                 "labels": ["active"],
-                "source": "https://github.com/matthewpatterson/howard",
+                "source": "https://github.com/atmattpatt/howard",
                 "rubygems": "howard"
             },
             {
@@ -21,7 +21,7 @@
                 "type": "library",
                 "headline": "A library to set up database models with test data",
                 "labels": ["active"],
-                "source": "https://github.com/matthewpatterson/carpenter",
+                "source": "https://github.com/atmattpatt/carpenter",
                 "packagist": "matthewpatterson/carpenter",
                 "roadmap": "GXR5F6ju/carpenter",
                 "longdesc": [
@@ -33,7 +33,7 @@
                 "type": "library",
                 "headline": "A template for bootstrapping PHP projects with Vagrant",
                 "labels": ["active"],
-                "source": "https://github.com/matthewpatterson/vagrant-php-template",
+                "source": "https://github.com/atmattpatt/vagrant-php-template",
                 "longdesc": [
                     "Using Vagrant, VirtualBox, and Salt, this template allows you to quickly spin up a development machine for PHP applications."
                 ]
@@ -43,7 +43,7 @@
                 "type": "library",
                 "headline": "Proof-of-Concept PHP Extension",
                 "labels": ["inactive"],
-                "source": "https://github.com/matthewpatterson/php-finance",
+                "source": "https://github.com/atmattpatt/php-finance",
                 "longdesc": [
                     "php-finance is a proof-of-concept PHP extension to add financial calculation functions, such as interest rate functions, present and future value, etc.  The primary purpose of this project is for me to learn how to build PHP extensions."
                 ]
@@ -53,7 +53,7 @@
                 "type": "library",
                 "headline": "Object-Oriented LDAP in PHP",
                 "labels": ["inactive"],
-                "source": "https://github.com/matthewpatterson/lore",
+                "source": "https://github.com/atmattpatt/lore",
                 "longdesc": [
                     "Lore is a PHP library that takes the pain out of working with LDAP.  It was born out of my work for Orlando 2018, but never finished."
                 ]
@@ -62,17 +62,17 @@
         "other": [
             {
                 "name": "My dotfiles",
-                "source": "https://github.com/matthewpatterson/dotfiles",
+                "source": "https://github.com/atmattpatt/dotfiles",
                 "description": "Various configuration files that make my life easier"
             },
             {
                 "name": "revcat.php",
-                "source": "https://gist.github.com/matthewpatterson/e60cb3b45dd061cc189c",
+                "source": "https://gist.github.com/atmattpatt/e60cb3b45dd061cc189c",
                 "description": "A command line utility for parsing Subversion logs and generating merge commands"
             },
             {
                 "name": "mod_reptile",
-                "source": "https://gist.github.com/matthewpatterson/cc636fd423363486bf7d",
+                "source": "https://gist.github.com/atmattpatt/cc636fd423363486bf7d",
                 "description": "A lesson on sandbox security, courtesy of Apache's mod_substitute"
             }
         ]
