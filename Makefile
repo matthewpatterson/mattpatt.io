@@ -1,5 +1,5 @@
-DOCKER=sudo docker
-COMPOSE=sudo docker-compose
+DOCKER=docker
+COMPOSE=docker-compose
 
 compose_build:
 	$(COMPOSE) build
@@ -9,7 +9,7 @@ run: compose_build
 
 build:
 	$(DOCKER) build -t profile .
-	$(DOCKER) build -t nginx .
+	$(DOCKER) build -t nginx config/nginx
 
 save: build
 	$(DOCKER) run -d profile:latest
