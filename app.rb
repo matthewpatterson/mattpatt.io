@@ -1,40 +1,20 @@
+require "json"
+require "socket"
+
 require "sinatra"
 
-def model(name)
-  root = File.dirname(__FILE__)
-  json = File.read(File.join(root, "models", name))
-  JSON.parse(json, symbolize_names: true)
-end
-
 get "/home" do
-  erb :homepage
+  erb :new
 end
 
-get "/about" do
-  @title = "About Me - "
-  erb :about
-end
-
-get "/work" do
-  @title = "My Work - "
-  @jobs = model("jobs.json")[:jobs]
-  erb :work
-end
-
-get "/projects" do
-  @title = "My Projects - "
-  @projects = model("projects.json")
-  erb :projects
-end
-
-get "/contact" do
-  @title = "Contact Me - "
-  erb :contact
-end
-
-get "/this" do
-  @title = "About This Site - "
-  erb :site
+get "/status" do
+  headers["Content-Type"] = "application/json"
+  {
+    host: Socket.gethostname,
+    pid: Process.pid,
+    status: "OK",
+    timestamp: Time.now,
+  }.to_json
 end
 
 get "/" do
