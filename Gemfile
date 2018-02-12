@@ -8,7 +8,7 @@ group :development do
 end
 
 group :development, :deployment do
-  gem 'capistrano', '3.2.1'
+  gem 'capistrano', '3.10.1'
   gem 'capistrano-bundler', '1.1.2'
   gem 'capistrano-rvm', '0.1.1'
   gem 'coffee-script', '2.4.1'
