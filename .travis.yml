@@ -11,10 +11,5 @@ env:
 before_script:
   - docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
   - echo "Building docker tag $DOCKER_TAG"
-  - docker build -t $DOCKER_TAG .
 
-install: /bin/true
-script: /bin/true
-
-after_script:
-  - docker push $DOCKER_TAG
+script: make build push
