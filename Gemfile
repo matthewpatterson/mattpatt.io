@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'unicorn', '4.9.0'
-gem 'sinatra', '1.4.5'
+gem 'sinatra', '2.0.1'
 
 group :development do
   gem 'shotgun', '0.9.2'
