@@ -4,7 +4,7 @@ gem 'unicorn', '4.9.0'
 gem 'sinatra', '1.4.5'
 
 group :development do
-  gem 'shotgun', '0.9'
+  gem 'shotgun', '0.9.2'
 end
 
 group :development, :deployment do
