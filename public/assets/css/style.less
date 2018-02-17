@@ -67,18 +67,27 @@ footer {
 
 .manpage {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.8em;
+  .top-link {
+    margin-top: 1.3em;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 0.6em;
+    font-weight: normal;
+    text-transform: none;
+  }
   p.lead {
+    font-size: 1.2em;
     font-weight: 700;
-    margin: 1em 0;
-    padding-left: 0;
     text-transform: uppercase;
   }
+  p.lead, p.copyright {
+    margin: 1em 0;
+    padding-left: 0;
+  }
   p, ul {
-    font-size: 0.8em;
-    margin-bottom: 0;
+    margin-bottom: 1.4em;
     padding-left: 40px;
     @media (max-width: 767px) {
-      font-size: 0.6em;
       padding-left: 20px;
     }
   }
@@ -93,6 +102,12 @@ footer {
       margin-left: -1em;
       width: 1em;
     }
+    li.add-space-after {
+      margin-bottom: 1.4em;
+    }
+  }
+  ul.no-margin {
+    margin-bottom: inherit;
   }
 }
 

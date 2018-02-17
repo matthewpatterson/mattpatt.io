@@ -9,7 +9,7 @@ env:
   - DOCKER_TAG="matthewpatterson/mattpatt.io:${TRAVIS_COMMIT:0:7}"
 
 before_script:
-  - docker login -e="$DOCKERHUB_EMAIL" -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
+  - docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
   - echo "Building docker tag $DOCKER_TAG"
   - docker build -t $DOCKER_TAG .
 
