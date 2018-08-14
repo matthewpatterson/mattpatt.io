@@ -29,7 +29,7 @@ GEM
     tilt (2.0.8)
     uglifier (4.1.15)
       execjs (>= 0.3.0, < 3)
-    unicorn (5.4.0)
+    unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
 
@@ -44,7 +44,7 @@ DEPENDENCIES
   sinatra (= 2.0.3)
   therubyracer (= 0.12.3)
   uglifier (= 4.1.15)
-  unicorn (= 5.4.0)
+  unicorn (= 5.4.1)
 
 BUNDLED WITH
    1.15.4
