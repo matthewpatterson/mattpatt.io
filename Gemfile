@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'unicorn', '5.4.1'
+gem 'unicorn', '5.5.0'
 gem 'sinatra', '2.0.4'
 
 group :development do
