@@ -1,9 +1,9 @@
-workflow "Docker tag" {
-  on = "push"
+workflow "Docker build and push" {
   resolves = [
     "Push mattpatt.io_nginx",
     "Push mattpatt.io",
   ]
+  on = "push"
 }
 
 action "Docker Registry" {
