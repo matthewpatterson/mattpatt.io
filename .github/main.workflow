@@ -13,7 +13,7 @@ action "Docker Registry" {
 
 action "Build mattpatt.io" {
   uses = "actions/docker/cli@8cdf801b322af5f369e00d85e9cf3a7122f49108"
-  args = "build -t \"matthewpatterson/mattpatt.io:${GITHUB_SHA:0:7}\""
+  args = "build -t \"matthewpatterson/mattpatt.io:${GITHUB_SHA:0:7}\" ."
   needs = ["Docker Registry"]
 }
 
