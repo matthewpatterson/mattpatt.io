@@ -7,14 +7,14 @@ GEM
     coffee-script-source (1.12.2)
     cssminify (1.0.2)
     execjs (2.7.0)
-    kgio (2.11.2)
+    kgio (2.11.3)
     libv8 (3.16.14.19)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     rack (2.0.8)
     rack-protection (2.0.8.1)
       rack
-    raindrops (0.19.0)
+    raindrops (0.19.1)
     rake (13.0.0)
     ref (2.0.0)
     ruby2_keywords (0.0.2)
@@ -31,7 +31,7 @@ GEM
     tilt (2.0.10)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    unicorn (5.5.1)
+    unicorn (5.5.2)
       kgio (~> 2.6)
       raindrops (~> 0.7)
 
@@ -46,7 +46,7 @@ DEPENDENCIES
   sinatra (= 2.0.8.1)
   therubyracer (= 0.12.3)
   uglifier (= 4.2.0)
-  unicorn (= 5.5.1)
+  unicorn (= 5.5.2)
 
 BUNDLED WITH
    1.15.4
